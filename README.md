@@ -15,6 +15,9 @@ Things I have to look up too often for the old dusty `/bin/sh` (not bash).
 my_func() {
     local arg1="$1"
     local my_local_var="foo"
+
+    # error
+    return 1
 }
 
 ```
