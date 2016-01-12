@@ -21,7 +21,7 @@ with stderr
     exec > file
     exec 2>&1
 
-These will truncate the file to append use
+These will truncate the file. To append use
 
     exec >> file
     exec 2>&1
@@ -30,7 +30,7 @@ These will truncate the file to append use
 ## File extension
 
 ```js
-filename=foo.txt
+filename="foo.txt"
 extension="${filename##*.}" # txt
 name="${filename%.*}" # foo
 ```
