@@ -99,3 +99,28 @@ while true; do
 done
 ```
 
+## Multiline strings
+
+```sh
+cat > config.json << WHATEV
+{
+    "defaultLanguage": "$lang"
+}
+WHATEV
+
+
+curl -d @- -X POST -H 'Content-Type: application/json' http://localhost:8080/log << JSON
+{
+  "type": "wlan",
+  "date": "1348134879",
+  "wlaninterface": "wlan0",
+  "event": "AP-STA-CONNECTED",
+  "mac": "e4:d5:3d:testmac",
+  "relay_timestamp": 1348134880
+}
+JSON
+
+```
+
+
+
