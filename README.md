@@ -9,6 +9,17 @@ Things I have to look up too often for the old dusty `/bin/sh` (not bash).
 >&2 echo "Warning message"
 ```
 
+## Functions
+
+```sh
+my_func() {
+    local arg1="$1"
+    local my_local_var="foo"
+}
+
+```
+
+
 ## Redirect output from within the script
 
 
