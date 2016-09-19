@@ -40,6 +40,11 @@ These will truncate the file. To append use
     exec >> file
     exec 2>&1
 
+## Handle exit status manually with `set -e`
+
+    ret=0
+    command_might_fail || ret=$?
+    
 
 ## File extension
 
