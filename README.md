@@ -22,6 +22,15 @@ my_func() {
 
 ```
 
+## Default values
+
+```sh
+arg="${0:-default}"
+
+if [ "${myvar:-default}" = "something" ]; then
+  # has something in myvar
+fi
+```
 
 ## Redirect output from within the script
 
