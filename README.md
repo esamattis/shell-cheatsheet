@@ -140,4 +140,24 @@ JSON
 
     date +%Y-%m-%d:%H:%M:%S
     
-    
+# Others
+
+## Git commit edit
+
+https://stackoverflow.com/a/1186549/153718
+
+You can use git rebase, for example, if you want to modify back to commit `bbc643cd`, run
+
+    $ git rebase --interactive 'bbc643cd^'
+
+In the default editor, modify `pick` to `edit` in the line whose commit you want to modify. Make your changes and then commit them with the same message you had before:
+
+    $ git commit --all --amend --no-edit
+
+to modify the commit, and after that
+
+    $ git rebase --continue
+
+to return back to the previous head commit.
+
+**WARNING**: Note that this will change the SHA-1 of that commit **as well as all children** -- in other words, this rewrites the history from that point forward. [You can break repos doing this](https://stackoverflow.com/a/3926832/1269037) if you push using the command `git push --force`
