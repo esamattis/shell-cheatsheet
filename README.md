@@ -85,11 +85,10 @@ fi
 
 ## Parse CLI options
 
-Do this before `set -eu`
 
 ```sh
 while true; do
-    case "$1" in
+    case "${1:-}" in
     -o|--option)
         shift
         option="$1"
