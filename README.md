@@ -101,6 +101,11 @@ while true; do
     -h|--help)
         help && exit 0
         ;;
+    -*|--*)
+        >&2 echo "Unknown arg $1"
+        exit 2
+        ;;
+    *)
     "")
         break
         ;;
