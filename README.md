@@ -9,6 +9,14 @@ Things I have to look up too often for the old dusty `/bin/sh` (not bash).
 >&2 echo "Warning message"
 ```
 
+## Line breaks with variables
+
+With `$'\n'`
+
+```
+echo "username:$USER"$'\n'"home:$HOME
+```
+
 ## Functions
 
 ```sh
